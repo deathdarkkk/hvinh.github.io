@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ff69b4; /* Màu hồng nền */
+    overflow: hidden; /* Ẩn thanh cuộn để các trái tim không bị cắt */
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    width: 400px;
+    position: relative;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #ff1493; /* Màu hồng đậm cho tiêu đề */
+    margin-bottom: 20px;
+    font-family: 'Edu VIC WA NT Beginner', cursive; /* Font cho tiêu đề */
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 150px; /* Khoảng cách dưới countdown để avatar */
+}
+
+.box {
+    flex: 1;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 2rem;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'New Amsterdam', serif; /* Font cho số */
+}
+
+.label {
+    display: block;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.avatars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 35px; /* Khoảng cách từ dưới lên */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.avatar-container {
+    text-align: center;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff; /* Viền trắng cho avatar */
+}
+
+.name {
+    margin-top: 5px;
+    font-family: 'Edu VIC WA NT Beginner', cursive; /* Font cho tên */
+    font-size: 1rem;
+    color: #000000; /* Màu chữ tên */
+}
+
+.heart-image {
+    width: 70px; /* Kích thước của hình trái tim */
+    height: 70px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .box {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .heart-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .name {
+        font-size: 0.8rem;
+    }
+}
+/* Các style hiện tại */
+.copyright {
+    position: absolute;
+    bottom: 1px; /* Khoảng cách từ dưới lên */
+    left: 95px; /* Khoảng cách từ bên trái */
+    text-align: left; /* Căn lề trái nội dung */
+    font-family: 'Edu VIC WA NT Beginner', cursive; /* Font cho bản quyền */
+    font-size: 0.9rem;
+    color: #000000; /* Màu chữ bản quyền */
+}
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.heart {
+    position: absolute;
+    width: 50px; /* Kích thước của trái tim */
+    height: 50px;
+    background-image: url('https://i.imgur.com/r8EwsTX.png'); /* Đường dẫn hình ảnh trái tim */
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20%;
+    animation: float 10s infinite, fadeInOut 10s infinite; /* Thêm animation fadeInOut */
+}
