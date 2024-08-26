@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sin Lui • Vin</title>
+
+    <link rel="icon" href="https://i.imgur.com/L8CoJvL.jpeg" type="image/x-icon">
+
+    <meta property="og:title" content="Sin Lui • Vin">
+    <meta property="og:description" content=":))">
+    <meta property="og:image" content="https://i.imgur.com/9N8riDD.jpeg">
+    <meta property="og:url" content="https://huuvinhh.ddns.net/checkva/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sin Lui • Vin">
+    <meta name="twitter:description" content=":))">
+    <meta name="twitter:image" content="https://i.imgur.com/9N8riDD.jpeg">
+    <meta name="twitter:url" content="https://huuvinhh.ddns.net/checkva/">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://i.imgur.com/22C0l9T.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        .container {
+            margin-top: 50px;
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        #typing {
+            font-size: 20px;
+            margin-top: 20px;
+            min-height: 24px;
+        }
+        #finalMessage {
+            display: none;
+            font-size: 24px;
+            color: #fff;
+            margin-top: 20px;
+        }
+        #image {
+            display: none;
+            margin-top: 20px;
+        }
+        .author-container {
+            display: none;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .author {
+            display: inline-block;
+            margin: 0 20px;
+            text-align: center;
+        }
+        .author img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .author-name {
+            font-style: italic;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #fff;
+        }
+         .author-name1 {
+            position: relative;
+            top: -10px;
+            font-weight: bold;
+            font-style: italic;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #fff;  
+        }
+        .copyright {
+            margin-top: 30px;
+            font-size: 16px;
+            color: #fff;
+        }
+        .copyright a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .copyright a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="button" onclick="startTyping()">Ấn vào đi😓</button>
+        <div id="typing"></div>
+        <div id="finalMessage">địt mẹ mày lỗi gen thì chết con mẹ mày đi lũ súc vật địt con bà chúng mày!</div>
+        <img id="image" src="https://i.imgur.com/hgQELiY.jpeg" alt="errorgen.jpeg" width="300">
+        
+        <div class="author-container" id="authorContainer">
+            <div class="author-name1">Two men against gay</div>
+            <div class="author">
+                <img src="https://i.imgur.com/p8xMy7Q.jpeg" alt="author">
+                <div class="author-name">vin</div>
+            </div>
+            <div class="author">
+                <img src="https://i.imgur.com/2OKSkGX.jpeg" alt="author">
+                <div class="author-name">bin</div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            Copyright &copy; 2024 <a href="https://www.facebook.com/profile.php?id=61563438726293&mibextid=ZbWKwL">vin</a>
+        </div>
+    </div>
+
+    <script>
+        const message = "Tôi xin gửi lời xin lỗi chân thành nhất đến cộng đồng LGBT và tất cả mọi người vì những hành vi, lời nói hoặc thái độ kì thị mà tôi đã thể hiện. Tôi nhận ra rằng những hành động của mình không chỉ làm tổn thương người khác mà còn góp phần duy trì những định kiến và sự bất công trong xã hội.";
+        let index = 0;
+
+        function startTyping() {
+            const typingDiv = document.getElementById("typing");
+            typingDiv.innerHTML = ""; 
+            index = 0;
+            typeWriter(typingDiv);
+        }
+
+        function typeWriter(typingDiv) {
+            if (index < message.length) {
+                typingDiv.innerHTML += message.charAt(index);
+                index++;
+                setTimeout(() => typeWriter(typingDiv), 25);
+            } else {
+                setTimeout(clearTyping, 1000); 
+            }
+        }
+
+        function clearTyping() {
+            const typingDiv = document.getElementById("typing");
+            typingDiv.innerHTML = ""; 
+            showFinalMessage();
+        }
+
+        function showFinalMessage() {
+            document.getElementById("finalMessage").style.display = "block";
+            document.getElementById("image").style.display = "block";
+            document.getElementById("authorContainer").style.display = "block";
+        }
+    </script>
+</body>
+</html>
