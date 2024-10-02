@@ -1,47 +1,86 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HuuVinh | Love days</title>
-    <link rel="stylesheet" href="css-js-img/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Error 404 - Page Not Found</title>
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <style>
+    /* Compiled SCSS */
+    :root {
+      --light-grey: #e0e2f4;
+      --grey: #aaaaaa;
+      --blue: #0414a7;
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a { color: var(--light-grey); }
+
+    body,
+    p { font: normal 20px/1.25rem 'VT323', monospace; }
+    h1 { font: normal 2.75rem/1.05em 'VT323', monospace; }
+    h2 { font: normal 2.25rem/1.25em 'VT323', monospace; }
+    h3 { font: lighter 1.5rem/1.25em 'VT323', monospace; }
+    h4 { font: lighter 1.125rem/1.2222222em 'VT323', monospace; }
+
+    body { background: var(--blue); }
+
+    .container {
+      width: 90%;
+      margin: auto;
+      max-width: 640px;
+    }
+
+    .bsod {
+      padding-top: 10%;
+    }
+
+    .neg {
+      text-align: center;
+      color: var(--blue);
+    }
+
+    .neg .bg {
+      background: var(--grey);
+      padding: 0 15px 2px 13px;
+    }
+
+    .title {
+      margin-bottom: 50px;
+    }
+
+    .nav {
+      margin-top: 35px;
+      text-align: center;
+    }
+
+    .link {
+      text-decoration: none;
+      padding: 0 9px 2px 8px;
+    }
+
+    .link:hover,
+    .link:focus {
+      background: var(--grey);
+      color: var(--blue);
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>How many days have we been in love?</h1>
-        <div class="countdown">
-            <div class="box" id="days">
-                <span id="days-number">00</span>
-                <span class="label">Ngày</span>
-            </div>
-            <div class="box" id="hours">
-                <span id="hours-number">00</span>
-                <span class="label">Giờ</span>
-            </div>
-            <div class="box" id="minutes">
-                <span id="minutes-number">00</span>
-                <span class="label">Phút</span>
-            </div>
-            <div class="box" id="seconds">
-                <span id="seconds-number">00</span>
-                <span class="label">Giây</span>
-            </div>
-        </div>
-        <div class="avatars">
-            <div class="avatar-container">
-                <img src="css-js-img/image/2.jpg" alt="Avatar 1" class="avatar">
-                <div class="name">Duong Bao Ngoc</div>
-            </div>
-            <img src="https://i.imgur.com/r8EwsTX.png" alt="Trái tim" class="heart-image">
-            <div class="avatar-container">
-                <img src="css-js-img/image/1.jpg" alt="Avatar 2" class="avatar">
-                <div class="name">Phan Huu Vinh</div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>&copy;2024 BaoNgoc belongs to HuuVinh</p>
-        </div>
-    </div>
-    <script src="css-js-img/script.js"></script>
+  <main class="bsod container">
+    <h1 class="neg title"><span class="bg">Error - 404</span></h1>
+    <p>An error has occurred, to continue:</p>
+    <p>* Return to our homepage.<br />
+    * Send us an e-mail about this error and try later.</p>
+    <nav class="nav">
+      <a href="/" class="link">index</a>&nbsp;|&nbsp;<a href="bolavinh.ddns.net" class="link">Other domain names</a>
+    </nav>
+  </main>
 </body>
-</html>
+    </html>
