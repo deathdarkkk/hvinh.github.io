@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhận Lì Xì</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffcc00;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 100px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #ff4500;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e63900;
+        }
+
+        #message {
+            font-size: 20px;
+            margin-top: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Nhận Lì Xì 🎊</h1>
+        <input type="text" id="name" placeholder="Nhập tên của bạn">
+        <input type="number" id="amount" placeholder="Nhập số tiền (VNĐ)">
+        <button onclick="nhanLiXi()">Nhận Lì Xì</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function nhanLiXi() {
+            let name = document.getElementById("name").value;
+            let amount = document.getElementById("amount").value;
+
+            if (name.trim() === "" || amount.trim() === "") {
+                alert("Vui lòng nhập đầy đủ thông tin!");
+                return;
+            }
+
+            let reasons = [
+                "Số tiền nhập vào quá lớn, hãy thử lại!",
+                "Lì xì không thể là số lẻ, hãy nhập số chẵn!",
+                "Hệ thống phát hiện lỗi, vui lòng thử lại sau!",
+                "Bạn nhập nhầm số tiền rồi, hãy thử lại!",
+                "Lì xì hiện đã hết, vui lòng quay lại sau!",
+                "Số tiền nhập không hợp lệ, hãy thử lại!"
+            ];
+
+            let reason = reasons[Math.floor(Math.random() * reasons.length)];
+            document.getElementById("message").innerHTML = `🚫 ${reason}`;
+        }
+    </script>
+</body>
+</html>
